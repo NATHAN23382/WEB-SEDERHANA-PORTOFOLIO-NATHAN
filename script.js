@@ -463,3 +463,91 @@ if (typingElement) {
     typeEffect();
 }
 
+/* =================================
+   FUTURISTIC JAVASCRIPT EFFECTS
+================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // MOUSE GLOW EFFECT
+    document.addEventListener("mousemove", (e) => {
+        const glow = document.getElementById("mouseGlow");
+
+        if (glow) {
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+        }
+    });
+
+    // PROJECT CARD 3D TILT
+    document.querySelectorAll(".project-card").forEach(card => {
+
+        card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const rotateY = ((x / rect.width) - 0.5) * 8;
+            const rotateX = ((y / rect.height) - 0.5) * -8;
+
+            card.style.transform =
+                `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "";
+        });
+
+    });
+
+    // AUTOMATIC COPYRIGHT YEAR
+    const year = document.getElementById("year");
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+
+});
+
+/* =================================
+   FLOATING PARTICLES GENERATOR
+================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const background = document.getElementById("particleBackground");
+
+    if (!background) return;
+
+    // Respect reduced motion settings
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+    }
+
+    // Create 55 floating particles
+    for (let i = 0; i < 55; i++) {
+
+        const particle = document.createElement("span");
+
+        particle.className = "particle";
+
+        const size = Math.random() * 2 + 1;
+
+        particle.style.width = size + "px";
+        particle.style.height = size + "px";
+
+        particle.style.left = Math.random() * 100 + "%";
+        particle.style.animationDuration =
+            (10 + Math.random() * 15) + "s";
+
+        particle.style.animationDelay =
+            (-Math.random() * 20) + "s";
+
+        background.appendChild(particle);
+    }
+
+});
+
+
+
