@@ -1,144 +1,418 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
+    <meta name="theme-color" content="#080d1a">
+    <meta name="description" content="Mohammad Nathan Personal Portfolio">
+
+    <title>Mohammad Nathan | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <h2 class="logo">PORT<span>FOLIO.</span></h2>
+<div class="scroll-progress">
+    <span id="scrollProgress"></span>
+</div>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav class="navbar">
+        <a href="#home" class="logo">PORT<span>FOLIO.</span></a>
 
-    <!-- HOME -->
+        <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="subtitle">WELCOME TO MY PORTFOLIO</p>
 
-            <h1>Hi, I'm <span>Mohammad Nathan</span></h1>
+        <div class="hero-content reveal">
 
-            <h3>Informatics Student & Developer</h3>
+            <p class="subtitle">
+                <span class="status-dot"></span>
+                WELCOME TO MY PORTFOLIO
+            </p>
+
+            <p class="hero-greeting">Hello, I'm</p>
+
+            <h1><span>Mohammad Nathan</span></h1>
+
+            <h3 class="hero-role">
+                Informatics Student |
+                <span id="typedRole">Aspiring Developer</span>
+            </h3>
 
             <p>
                 Saya tertarik dengan dunia teknologi,
                 pemrograman, dan pengembangan website.
                 Saya terus belajar untuk mengembangkan
-                kemampuan di bidang teknologi.
+                kemampuan dan membangun proyek digital
+                yang bermanfaat.
             </p>
 
-            <a href="#projects" class="btn">Explore My Work</a>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">Explore My Work ↗</a>
+                <a href="#about" class="btn btn-outline">More About Me</a>
+            </div>
+
+            <div class="hero-note">
+                LEARN <span>✦</span> BUILD <span>✦</span> IMPROVE
+            </div>
+
+            <div class="hero-socials">
+                <a href="https://github.com/NATHAN23382" target="_blank" rel="noopener noreferrer">GH</a>
+                <a href="mailto:ell969114@gmail.com">@</a>
+                <a href="#contact">↗</a>
+            </div>
+
         </div>
 
-        <div class="profile">
-            <img src="assets/foto-nathan.jpg" alt="Foto Profil">
+        <div class="profile reveal">
+            <div class="profile-ring"></div>
+
+            <img src="assets/foto-nathan.jpg"
+                 alt="Foto Mohammad Nathan">
+
+            <div class="profile-label">
+                <strong>Mohammad Nathan</strong>
+                <small>Informatics Student</small>
+            </div>
         </div>
+
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
+
+        <p class="section-kicker">01 — GET TO KNOW ME</p>
+
         <h2>About <span>Me</span></h2>
-        <p>
-            Saya adalah mahasiswa yang memiliki ketertarikan
-            dalam bidang teknologi informasi, khususnya
-            programming dan web development.
-            Saya senang mempelajari hal baru dan membuat
-            berbagai proyek digital.
-        </p>
+
+        <div class="about-layout">
+
+            <p class="about-highlight">
+                Learning today,<br>
+                <span>building tomorrow.</span>
+            </p>
+
+            <div class="about-copy">
+                <p>
+                    Saya adalah mahasiswa yang memiliki
+                    ketertarikan dalam bidang teknologi informasi,
+                    khususnya programming dan web development.
+                </p>
+
+                <p>
+                    Saya senang mempelajari hal baru,
+                    membuat berbagai proyek digital,
+                    serta meningkatkan kemampuan problem-solving.
+                </p>
+
+                <p>
+                    Saya percaya bahwa kemampuan berkembang
+                    melalui latihan dan kemauan untuk terus belajar.
+                </p>
+            </div>
+
+        </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section">
+    <section id="skills" class="section section-alt reveal">
+
+        <p class="section-kicker">02 — WHAT I AM LEARNING</p>
+
         <h2>My <span>Skills</span></h2>
 
+        <p class="section-intro">
+            Teknologi yang sedang saya pelajari.
+        </p>
+
         <div class="skills-container">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Java</div>
-            <div class="skill">Python</div>
+
+            <div class="skill">
+                <span class="skill-icon">HTML</span>
+                <strong>HTML</strong>
+                <small>Web Structure</small>
+                <span class="skill-track"><span style="--skill-level:82%"></span></span>
+            </div>
+
+            <div class="skill">
+                <span class="skill-icon">CSS</span>
+                <strong>CSS</strong>
+                <small>Web Styling</small>
+                <span class="skill-track"><span style="--skill-level:74%"></span></span>
+            </div>
+
+            <div class="skill">
+                <span class="skill-icon">JS</span>
+                <strong>JavaScript</strong>
+                <small>Web Interaction</small>
+                <span class="skill-track"><span style="--skill-level:52%"></span></span>
+            </div>
+
+            <div class="skill">
+                <span class="skill-icon">J</span>
+                <strong>Java</strong>
+                <small>Programming Basics</small>
+                <span class="skill-track"><span style="--skill-level:48%"></span></span>
+            </div>
+
+            <div class="skill">
+                <span class="skill-icon">Py</span>
+                <strong>Python</strong>
+                <small>Programming Basics</small>
+                <span class="skill-track"><span style="--skill-level:45%"></span></span>
+            </div>
+
         </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <section id="projects" class="section reveal">
+
+        <p class="section-kicker">03 — THINGS I HAVE BUILT</p>
+
         <h2>My <span>Projects</span></h2>
 
+        <p class="section-intro">
+            Beberapa proyek dan latihan programming saya.
+        </p>
+
         <div class="projects-container">
-            <div class="project-card">
-                <h3>Personal Portfolio</h3>
-                <p> Hello! My name is Mohammad Nathan. I am an Informatics student with a strong interest in technology and software development.
-                    I enjoy exploring programming languages, developing websites, and learning how technology can solve real-world problems.
-                    I believe that every line of code is an opportunity to learn, improve, and create something meaningfull.
 
-</p>
+            <article class="project-card">
+                <div class="project-visual visual-web">
+                    <span>N.</span>
+                    <small>WEB DEVELOPMENT</small>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        Website pribadi untuk memperkenalkan
+                        diri dan menampilkan kemampuan saya.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-visual visual-java">
+                    <span>{ }</span>
+                    <small>JAVA PROGRAMMING</small>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Variables</span>
+                    </div>
+
+                    <h3>Java Biodata</h3>
+
+                    <p>
+                        Program sederhana untuk menampilkan
+                        data biodata menggunakan Java.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-visual visual-python">
+                    <span>Py</span>
+                    <small>PYTHON PROGRAMMING</small>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Fundamentals</span>
+                    </div>
+
+                    <h3>Python Project</h3>
+
+                    <p>
+                        Latihan Python untuk mempelajari
+                        variabel, input, output, dan perulangan.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section section-alt reveal">
+
+        <p class="section-kicker">04 — MY JOURNEY</p>
+
+        <h2>Education & <span>Growth</span></h2>
+
+        <div class="timeline">
+
+            <article class="timeline-item">
+                <span class="timeline-dot"></span>
+                <p class="timeline-date">CURRENTLY</p>
+
+                <h3>Informatics Student</h3>
+
+                <p>
+                    Mempelajari pemrograman, logika komputasi,
+                    pengembangan website, dan teknologi informasi.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-dot"></span>
+                <p class="timeline-date">ONGOING</p>
+
+                <h3>Independent Learning</h3>
+
+                <p>
+                    Mengembangkan kemampuan melalui latihan coding
+                    dan proyek pribadi.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- GOALS -->
+    <section id="goals" class="section reveal">
+
+        <p class="section-kicker">05 — LOOKING AHEAD</p>
+
+        <h2>My Career <span>Goals</span></h2>
+
+        <div class="goals-panel">
+
+            <div class="goal-mark">✦</div>
+
+            <div>
+                <h3>Turning curiosity into capability.</h3>
+
+                <p>
+                    Target saya adalah menjadi software developer
+                    profesional, mengembangkan aplikasi bermanfaat,
+                    dan berkontribusi dalam dunia teknologi.
+                </p>
             </div>
 
-            <div class="project-card">
-                <h3>Java Biodata</h3>
-                <p></p> Student Biodata Program
-
-
-
-                         A simple Java-based program designed to display student personal information, including name, place of birth, date of birth, gender, address, and major.
-
-                         This project was created to understand the basic concepts of Java programming, especially variables, data types, and output statements.
-
-                         echnologies Used: Java
- 
-
-                         Category: Beginner Programming Project
-                
-            </div>
-
-            <div class="project-card">
-                <h3>Python Project</h3>
-                <p> Python Programming Project
-
-                    A simple programming project developed using Python to practice basic programming concepts and improve problem-solving skills.
-
-                     This project focuses on understanding variables, data types, input and output, conditional statements, and loops.
-
-                     Through this project, I aim to improve my logical thinking and build a strong foundation in Python programming.
-
-                     Technologies Used:** Python
-
-                    Category: Beginner Programming Project.</p>
-            </div>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
+    <section id="contact" class="section contact-section reveal">
+
+        <p class="section-kicker">06 — LET'S CONNECT</p>
+
         <h2>Contact <span>Me</span></h2>
 
-        <p>Email: ell969114@gmail.com</p>
-        <p>WhatsApp: 081386297791</p>
+        <p class="section-intro">
+            Feel free to connect with me and share ideas.
+        </p>
 
-        <a href="https://github.com/NATHAN23382" target="_blank" class="btn">
-            Visit My GitHub
-        </a>
+        <div class="contact-cards">
+
+            <a class="contact-card" href="mailto:ell969114@gmail.com">
+                <span>✉</span>
+                <small>EMAIL</small>
+                <strong>ell969114@gmail.com</strong>
+            </a>
+
+            <a class="contact-card"
+               href="https://github.com/NATHAN23382"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span>⌘</span>
+                <small>GITHUB</small>
+                <strong>Visit My GitHub ↗</strong>
+            </a>
+
+            <div class="contact-card">
+                <span>◎</span>
+                <small>WHATSAPP</small>
+                <strong>Contact details available on request</strong>
+            </div>
+
+        </div>
+
     </section>
 
-    <footer>
-        <p>© 2026 Mohammad Nathan. All Rights Reserved.</p>
-    </footer>
+</main>
 
-    <script src="script.js"></script>
+<footer>
+    <a href="#home" class="footer-logo">PORT<span>FOLIO.</span></a>
 
+    <p>
+        © <span id="year"></span> Mohammad Nathan.
+        All Rights Reserved.
+    </p>
+
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    ↑
+</button>
+
+<script src="script.js"></script>
+
+
+<!-- EXTRA FEATURES -->
+
+<!-- DIGITAL CLOCK -->
+<div class="digital-widget">
+    <span>LOCAL TIME</span>
+    <h3 id="digitalClock">00:00:00</h3>
+    <p id="digitalDate">Loading...</p>
+</div>
+
+<!-- GREETING -->
+<div class="greeting-widget">
+    <span id="timeGreeting">Welcome!</span>
+</div>
+
+<!-- PARTICLE BACKGROUND -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- MOUSE GLOW -->
+<div class="mouse-glow" id="mouseGlow"></div>
+<a href="https://wa.me/6281386297791?s=t"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="contact-btn whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+    Hubungi Saya via WhatsApp
+
+<!-- END EXTRA FEATURES -->
 </body>
 </html>
+
